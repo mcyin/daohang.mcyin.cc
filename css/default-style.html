@@ -63,32 +63,47 @@
 
     /*导航栏链接样式结束*/
 
-    /*导航栏百度搜索输入框样式开始*/
+    /*导航栏天气样式开始*/
 
-    .baidu-submit-text,
-    .baidu-submit-text:active,
-    .baidu-submit-text:focus {
+    .nav-weather {
+        height: 36px;
+        padding: 2px 1rem;
+    }
+
+    /*导航栏天气样式开始*/
+
+    /*导航栏搜索输入框样式开始*/
+
+    .nav-submit-text,
+    .nav-submit-text:active,
+    .nav-submit-text:focus {
         color: white;
         text-align: center;
         background: #686acc;
     }
 
-    .baidu-submit-text::placeholder {
+    .nav-submit-text::placeholder {
         color: white;
     }
 
-    /*导航栏百度搜索输入框样式结束*/
+    /*导航栏搜索输入框样式结束*/
 
-    /*导航栏百度搜索按钮样式开始*/
+    /*导航栏搜索按钮样式开始*/
 
-    .baidu-submit-button {
+    .nav-submit-button {
         color: white;
         background-color: #686acc;
         background-image: none;
         border-color: #686acc;
     }
 
-    /*导航栏百度搜索按钮样式结束*/
+    @media (max-width:576px) {
+        .nav-submit-button {
+            margin: auto;
+        }
+    }
+
+    /*导航栏搜索按钮样式结束*/
 
     /*页脚样式开始*/
 
