@@ -7,9 +7,45 @@
     }
 
     .my-main-div {
+        color: white;
         height: 100%;
+        padding: 10rem 0;
         background-color: rgba(0, 0, 0, 0.5)
     }
 
+    .my-main-div .container {
+        height: 100%;
+        padding: 1rem;
+    }
+
     /*内容默认div样式开始*/
+
+    /*搜索LOGO样式开始*/
+
+    .search-logo {
+        width: 100%;
+        height: 0;
+        padding-top: 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 1.5rem
+    }
+
+    @media(min-width:576px) {
+        .search-logo {
+            width: 508px;
+            padding-top: 254px;
+        }
+    }
+
+    /*搜索LOGO样式结束*/
+
+    /*搜索LOGO图片开始*/
+
+    .baidu-search-logo {
+        background-image: url(../image/logo/search/baidu.png);
+    }
+
+    /*搜索LOGO图片结束*/
 </style>

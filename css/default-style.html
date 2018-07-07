@@ -21,7 +21,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-image: url(../image/default-background.png)
+        background-image: url(../image/background/default.png)
     }
 
     /*默认背景样式结束*/
@@ -42,23 +42,23 @@
         padding-left: 2.5rem;
         background-size: contain;
         background-repeat: no-repeat;
-        background-image: url(../image/logo.png)
+        background-image: url(../image/logo/mcyin.png)
     }
 
     /*LOGO样式结束*/
 
     /*导航栏链接样式开始*/
 
-    .nav-item a {
+    .my-header-nav-item a {
         text-align: center;
     }
 
-    .nav-item a:hover {
-        background: #686acc;
+    .my-header-nav-item a:hover {
+        background: rgba(104, 106, 204, 0.5);
     }
 
-    .active.nav-item {
-        background: #686acc;
+    .active.my-header-nav-item {
+        background: rgba(104, 106, 204, 0.5);
     }
 
     /*导航栏链接样式结束*/
@@ -66,41 +66,46 @@
     /*导航栏天气样式开始*/
 
     .nav-weather {
+        width: 180px;
         height: 36px;
-        padding: 2px 1rem;
+        margin: 2px 1rem;
     }
 
-    /*导航栏天气样式开始*/
+    @media(max-width:992px) {
+        .nav-weather {
+            width: 100%;
+        }
+    }
 
     /*导航栏搜索输入框样式开始*/
 
-    .nav-search-text,
-    .nav-search-text:active,
-    .nav-search-text:focus {
+    .search-text,
+    .search-text:active,
+    .search-text:focus {
         color: white;
         text-align: center;
-        background: #686acc;
+        width: calc(100% - 42px);
+        background: rgba(104, 106, 204, 0.5);
+        border-color: #686acc;
     }
 
-    .nav-search-text::placeholder {
+    .search-text::placeholder {
         color: white;
+    }
+
+    .form-inline .search-text {
+        width: calc(100% - 42px);
     }
 
     /*导航栏搜索输入框样式结束*/
 
     /*导航栏搜索按钮样式开始*/
 
-    .nav-search-button {
+    .search-button {
         color: white;
-        background-color: #686acc;
+        background-color: rgba(104, 106, 204, 0.5);
         background-image: none;
         border-color: #686acc;
-    }
-
-    @media (max-width:576px) {
-        .nav-search-button {
-            margin: auto;
-        }
     }
 
     /*导航栏搜索按钮样式结束*/
