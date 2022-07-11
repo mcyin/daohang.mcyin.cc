@@ -1,0 +1,122 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width,user-scalable=no">
+	
+	
+	
+	
+	
+	<meta name="format-detection" content="telephone=no"/>
+	<title>小殷的新标签页</title>
+	
+	
+	
+	<style>
+		#loading-bottom{width:204px;height:34px;position:absolute;bottom:60px;left:0;right:0;margin:auto;text-align: center;text-decoration:none;color:#8E8E8E;}
+		#loadingPage{
+			width:100%;
+			height:100%;
+			display:none;
+			
+			background-color:#FFFFFF;
+			
+			
+			z-index: 9999;
+			position: absolute;
+			top:0;
+			left:0;
+		}
+		
+		#loadingGif{
+			position:absolute;
+			max-width: 100%;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			-webkit-transform:translate(-50%,-50%);
+		}
+		
+		
+		
+		
+	</style>
+	
+	
+
+</head>
+<body>
+	<div id="app"></div>
+	
+	
+	
+	
+	
+	<div id="loadingPage">
+		
+		<img id="loadingGif" src="assets/dcbf6d4bd5682e1830f23ac8fdb8f3cf_2426.svg"/>
+		
+		
+		
+		
+	</div>
+	
+	
+
+	<script>
+	
+	
+	
+	
+	var loadingDone = false;
+	
+	var loadingTime = 0 * 1000;
+	if(loadingTime > 0) {
+		setTimeout(function() {
+			loadingDone = true;
+			var e = document.getElementById("loadingPage");
+			e && e.parentNode.removeChild(e);
+			setTimeout(function(){window.ReactNativeWebView && window.ReactNativeWebView.postMessage(JSON.stringify({'type':'hideSplash'}))},200);
+		},loadingTime)
+	}
+	function onprogress(p) {
+		//console.log(p);
+		if (loadingDone) return;
+		if (p <= 1) {
+			p = Math.round(p * 100)
+		}
+		//var loadingPage = document.getElementById("loadingPage");
+		//if (loadingPage) {
+		//	loadingPage.style.display = 'block';
+		//}
+		
+		
+		
+		if(p >= 100 && loadingTime <= 0) {
+			loadingDone = true;
+			var e = document.getElementById("loadingPage");
+			e && e.parentNode.removeChild(e);
+			setTimeout(function(){window.ReactNativeWebView && window.ReactNativeWebView.postMessage(JSON.stringify({'type':'hideSplash'}))},200);
+		}
+	}
+	
+	
+	onprogress(0);
+
+	var vxConfig = {
+		onprogress,
+		
+		
+	}
+	</script>
+	
+	<script src="assets/player.js?1102751484"></script>
+</body>
+</html>
